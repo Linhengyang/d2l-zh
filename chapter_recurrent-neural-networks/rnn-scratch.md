@@ -724,7 +724,7 @@ def train_epoch_ch8(net, train_iter, loss, updater, device, use_random_iter):
                 # state对于nn.GRU是个张量
                 state.detach_()
             else:
-                # state对于nn.LSTM或对于我们从零开始实现的模型是个张量
+                # state对于nn.LSTM或对于我们从零开始实现的模型是个元组
                 for s in state:
                     s.detach_()
         y = Y.T.reshape(-1)
