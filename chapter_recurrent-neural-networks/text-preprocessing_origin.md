@@ -141,7 +141,7 @@ class Vocab:  #@save
     def to_tokens(self, indices):
         if not isinstance(indices, (list, tuple)):
             return self.idx_to_token[indices]
-        return [self.idx_to_token[index] for index in indices]
+        return [self.to_tokens(index) for index in indices]
 
 def count_corpus(tokens):  #@save
     """Count token frequencies."""
