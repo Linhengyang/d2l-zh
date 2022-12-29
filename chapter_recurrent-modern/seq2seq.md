@@ -34,10 +34,10 @@
 如 :numref:`fig_seq2seq`所示，
 编码器最终的隐状态在每一个时间步都作为解码器的输入序列的一部分。
 类似于 :numref:`sec_language_model`中语言模型的训练，
-可以允许标签成为原始的输出序列，
-从源序列词元“&lt;bos&gt;”“Ils”“regardent”“.”
+可以将标签设定为原始的输出序列向右平移一位：
+原序列词元“&lt;bos&gt;”“Ils”“regardent”“.”
 到新序列词元
-“Ils”“regardent”“.”“&lt;eos&gt;”来移动预测的位置。
+“Ils”“regardent”“.”“&lt;eos&gt;”。
 
 下面，我们动手构建 :numref:`fig_seq2seq`的设计，
 并将基于 :numref:`sec_machine_translation`中
